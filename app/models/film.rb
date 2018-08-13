@@ -6,6 +6,8 @@ class Film < ApplicationRecord
   has_many :film_categories
   has_many :categories, through: :film_categories
 
+  scope :order_film, -> {order created_at: :desc}
+
   validates :name, presence: true
 
   mount_uploader :thumbnail, ThumbnailUploader

@@ -44,7 +44,7 @@
                 <% end %>
               </ul>
               <span class="duration"><%= @film.duration %> min</span>
-              <div class="rate" id="rate" data-rate="91">Rating:<span id="rateYo"></span><span id="count-rate">( <%= @film.raters.count %> )</span></div>
+              <div class="rate" id="rate" data-rate=<%= @film.average_ratings ? @film.average_ratings : 0 %>>Rating:<span id="rateYo"></span><span id="count-rate">( <%= @film.raters.count %> )</span></div>
               <ul class="share">
                 <li class="facebook">
                   <a href="http://www.facebook.com/sharer.php?u=<%= request.original_url %>" class="post_share_facebook" onclick="javascript:window.open(this.href,
@@ -69,7 +69,7 @@
               <%= render("films/rate-form") %>
             </div>
             <div class="film-review-right">
-              <span>9.8</span>
+              <span><%= @film.average_ratings if @film %></span>
             </div>
           </div>
           <div class="film-story text-content">
