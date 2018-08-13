@@ -40,7 +40,7 @@ $(document).on('turbolinks:load', function() {
         ratedFill: "#F9D641",
         numStars: 10,
         maxValue: 10,
-        rating: rate+"%",
+        rating: rate,
         readOnly: true,
         halfStar: true
     });
@@ -55,5 +55,6 @@ $(document).on('turbolinks:load', function() {
     $('#ratefilm').click(function () {
         var rating = $ratefilm.rateYo("rating");
         $('#rate-value').val(rating);
+        $('.message').html('You are rating film with '+rating+' stars.')
     })
 });

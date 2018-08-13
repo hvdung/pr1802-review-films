@@ -41,10 +41,12 @@ ul{
 .btn{
   border-radius: 0;
   background: #F26522;
+  border-color: $accent-color;
   color: #fff;
   transition: 0.3s;
   &:hover{
     background: $title-color;
+    border-color: $title-color;
   }
 }
 .form-control{
@@ -126,5 +128,18 @@ ul{
     color: #fff;
     text-decoration: none;
     cursor: not-allowed;
+  }
+}
+
+// Login -Signup
+.account{
+  fieldset{
+    width: 500px;
+  }
+  form{
+    padding: 20px;
+    padding-top: 40px;
+    background: #fff;
+    box-shadow: 5px 5px 10px 0px #ccc;
   }
 }
