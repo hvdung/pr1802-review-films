@@ -56,5 +56,18 @@ $(document).on('turbolinks:load', function() {
         var rating = $ratefilm.rateYo("rating");
         $('#rate-value').val(rating);
         $('.message').html('You are rating film with '+rating+' stars.')
+    });
+    
+    $('a.btn-quickview').click(function () {
+        var review_id = $(this).attr('data-review-id');
+        var href = $(this).attr('href');
+        $.ajax({
+            type: "GET",
+            url: href,
+            data: {
+                id_review: review_id
+            },
+            dataType: "script",
+        })
     })
 });

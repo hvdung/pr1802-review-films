@@ -3,6 +3,14 @@ class FilmsController < ApplicationController
 
   def show
     @rate = @film.ratings.build
+
+    if params[:id_review]
+      @review = Review.find_by id: params[:id_review]
+    end
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private
