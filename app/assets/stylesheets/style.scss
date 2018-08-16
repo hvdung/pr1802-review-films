@@ -75,6 +75,7 @@ ul{
 @import "archive";
 @import "film";
 @import "index";
+@import "left_sidebar";
 
 .account{
   background: #E5E5E5;
@@ -141,5 +142,12 @@ ul{
     padding-top: 40px;
     background: #fff;
     box-shadow: 5px 5px 10px 0px #ccc;
+  }
+}
+
+//Loading review
+#review-content.loading{
+  .modal-body{
+    background: asset_url("loading.svg") center center no-repeat;
   }
 }
