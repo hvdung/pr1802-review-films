@@ -1,0 +1,30 @@
+<div class="film-related">
+  <h3><i class="far fa-thumbs-up"></i>Recommend movies</h3>
+  <div class="row">
+    <% @film_relateds.each do |f| %>
+    <div class="col-md-4">
+      <div class="rlt-film">
+        <div class="thumb">
+          <a href="#">
+            <%= image_tag "review-item.jpg" %>
+          </a>
+        </div>
+        <div class="info">
+          <h3>
+            <a href="#"><%= f.name %></a>
+          </h3>
+          <ul class="meta">
+            <li>
+              <i class="fas fa-archive"></i>
+              <a href="#">Star war</a>
+            </li>
+            <li>
+              Rating
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

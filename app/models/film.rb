@@ -13,6 +13,7 @@ class Film < ApplicationRecord
   mount_uploader :video_thumbnail, ThumbnailUploader
 
   scope :order_films, -> {order created_at: :desc}
+  scope :related_films, -> (category_id) { joins(:film_categories).where("category_id = ?","#{category_id}").limit(3) }
 
   scope :sort_films, ->(sort_params){ order("#{sort_params} desc") }
 

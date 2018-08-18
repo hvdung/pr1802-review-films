@@ -3,9 +3,9 @@ default: &default
   encoding: utf8
   pool: 5
   host: localhost
-  database: review-films
+  database: review_films
   username: root
-  password: "123456"
+  password:
 development:
   <<: *default
 
