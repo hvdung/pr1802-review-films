@@ -12,11 +12,7 @@ class FilmsController < ApplicationController
       format.js
     end
 
-    @film_relateds = Film.where(nil)
-    @ids = @film.category_ids
-    @ids.each do |id|
-      @film_relateds = @film_relateds.related_films(id)
-    end
+    @film_relateds = Film.related_films @film.category_ids
     @film_relateds = @film_relateds.order_films
   end
 
