@@ -136,3 +136,7 @@ li{
   .block-section .list-cat li{
     margin-bottom: 5px;
   }
+
+  .txt-white{
+    color: #fff;
+  }

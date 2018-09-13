@@ -116,3 +116,20 @@ en:
         email_placeholder: "Enter email"
         password: "Password"
         password_placeholder: "Enter password"
+    comments:
+      index:
+        id: "ID"
+        author: "Author"
+        comment: "Comment content"
+        status: "Status"
+        action: "Action"
+        belong_to: "In response to"
+        submited_on: "Submited on"
+        link_edit: "Edit"
+        link_delete: "Delete"
+        confirm_delete: "Delete"
+      update:
+        comment_updated: "Comment updated"
+        comment_updated_error: "Comment updated error"
+      form:
+        btn_title_edit: "Edit comment"

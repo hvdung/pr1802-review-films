@@ -3,6 +3,8 @@ class Comment < ApplicationRecord
   belongs_to :commentable, polymorphic: true
   has_many :comments, as: :commentable, dependent: :destroy
 
+  delegate :name, to: :user, prefix: true
+
   validates_presence_of :content
   validates_length_of :content,
     minimum: Settings.comment.content.length.minimum,
